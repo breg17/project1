@@ -1,0 +1,92 @@
+/*預先設定*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*背景設定*/
+body {
+}
+
+/*上方固定選單的設定*/
+div.container {
+  position: sticky;
+  /*設定排版方式*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* flex-basis: 5rem;*/
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  top: 0;
+  left: 0;
+}
+/*logo*/
+.logo {
+  background-image: url(./素材/左上logo.png);
+  background-size: cover;
+}
+/*控制右上角的選單按鈕的style*/
+a.option {
+  padding: 1.5rem 2rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  text-decoration: none;
+  color: darkseagreen;
+  background-color: white;
+  font-size: 1.5rem;
+  text-align: right; /*靠右對齊*/
+  line-height: 2em; /*行高*/
+  font-family: Arial, Helvetica, sans-serif; /*字體*/
+  font-weight: 400; /*粗度*/
+  border: none; /*邊界設定*/
+  transition: all 0.25s ease-in-out;
+}
+.option:hover {
+  color: darkgreen;
+  background-color: rgb(245, 237, 237);
+  text-decoration: underline; /*底線*/
+  font-weight: 1000;
+}
+/*彈出式背景*/
+.container2 {
+  background-image: url(./素材/background.png);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  width: 100vw;
+  height: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+.jump.orange {
+  position: absolute;
+  z-index: 1;
+  top: 25%;
+  left: 85%;
+  transform: translate(0%, -50%);
+}
+.jump.arrow {
+  position: absolute;
+  z-index: 2;
+  top: 25%;
+  left: 92.5%;
+  transform: translate(0%, -50%);
+  opacity: 0.5;
+  transition: 0.25s ease-in;
+}
+.jump.arrow:hover {
+  opacity: 1;
+}
+.jump.arrow:focus {
+  background-color: violet;
+}
+@keyframes bounceout {
+  from {
+  }
+  to {
+    top: 0%;
+    left: 0%;
+  }
+}
